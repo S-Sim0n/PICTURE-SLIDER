@@ -1,0 +1,106 @@
+/* load-page */
+.overlay{
+    position: fixed;
+    z-index: 101;
+    inset: 0;
+    
+    background: #e2e2e2;
+    
+    transform-origin: bottom;
+    animation: overlay var(--duration, 1.3s) cubic-bezier(0.6,0.2,0.26,1) forwards 2.8s;
+    will-change: transform;
+    /* smooth cubic-bezier(0.5,0.15,0.25,1) */  
+}
+@keyframes overlay {
+    0% { transform: scaleY(1); }
+    100% { transform: scaleY(0); }
+}
+
+.load-page-logo{
+    position: absolute;
+    z-index: 102;
+    top: 15px;
+    left: 15px;
+    width: var(--logo-width);
+    aspect-ratio: 1;
+    overflow: hidden;
+    
+    transform: scale(4.5);
+    transform: scale(4.5) scaleY(0); 
+    transform-origin: top left;
+    
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+    animation: 
+        logo-reveal 1s cubic-bezier(0.5, 0.15, 0.25, 1) forwards 0.2s,
+        logo-scale var(--duration, 1.3s) cubic-bezier(0.5, 0.15, 0.25, 1) forwards 2.8s;
+
+    background: var(--foreground);
+    
+    pointer-events: none;
+
+    will-change: transform; 
+}
+
+@keyframes logo-reveal {
+    0% { 
+        transform: scale(4.5) scaleY(0); 
+    }
+    100% { 
+        transform: scale(4.5) scaleY(1); /* Nur Y-Achse aufdecken */
+    }
+}
+
+@keyframes logo-scale {
+    0% { 
+        transform: scale(4.5) scaleY(1); /* Behalte scaleY bei */
+    }
+    100% { 
+        transform: scale(1) scaleY(1); /* Skaliere Gesamtgröße runter */
+    }
+}
+
+.load-page-logo .name{
+    line-height: 1.3em;
+    
+    font-size: var(--font);
+    color: var(--background);
+    
+    opacity:0;
+    transform: translateY(100%);
+    animation: name 1.5s cubic-bezier(0.2, 0.6, 0.3, 1) 1.2s forwards;
+    
+    will-change: transform opacity; 
+}
+@media screen and (orientation: portrait){
+    .load-page-logo .name{
+        line-height: 1.195em;
+    }
+}
+@keyframes name{
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    20%{
+        opacity: 0.5;
+    }
+    
+    70%{
+        transform: translateY(0%);
+    }
+    90%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    98%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 0;
+    }
+}

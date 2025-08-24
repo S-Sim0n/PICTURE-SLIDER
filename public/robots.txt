@@ -1,0 +1,9 @@
+User-agent: *
+#Allow: /
+Disallow: /
+#Disallow: /private/
+#Disallow: /admin/
+#Disallow: /tmp/
+
+# Sitemap angeben (wichtig für SEO)
+#Sitemap: https://www.deine-domain.de/sitemap.xml

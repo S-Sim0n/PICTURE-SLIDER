@@ -1,0 +1,28 @@
+
+/* texgyreheros */
+
+@font-face {
+  font-display: block;
+  font-family: 'tex_gyre_herosbold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/texgyreheros-bold-webfont.woff') format('woff'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+  font-display: block;
+  font-family: 'texgyreheros_regular_webfont';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/texgyreheros-regular-webfont.woff') format('woff'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+/* inter-300 - latin */
+@font-face {
+  font-display: block;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/inter-v18-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}

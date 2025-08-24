@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./index.css"> 
+        <link rel="stylesheet" href="./fonts.css">
+        <link rel="stylesheet" href="/slider.css">
+        <link rel="stylesheet" href="./load-page.css">
+        <link rel="icon" href="./icons/logo.svg" type="image/svg">
+        <title>PICTURE SLIDER v1 </title>
+        <meta name="description" content="lightweight Picture Slider responive, user-friendly, smooth">
+        <meta name="autor" content="Simon Schindler">
+        <!-- csp -->
+        <meta 
+            http-equiv="Content-Security-Policy" 
+            content="
+                default-src 'self';
+                script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com;
+                style-src 'self' 'unsafe-inline';
+                img-src 'self' ;
+                font-src 'self';
+                connect-src 'self';
+                frame-src 'none';
+                object-src 'none';
+            "
+        >
+    </head>
+    <body>
+        <div class="overlay">
+            
+        </div>
+        <div class="load-page-logo"><span class="name">SCHINDLER</span></div>
+       
+        <h1>
+            
+            <span class="h1-top">lightweight</span>
+            <span class="h1-bottom">
+                <span>PICTURE</span>
+                <span>SLIDER<span class="h1-v1"> v.1</span></span>
+            </span>
+            
+        </h1>
+        <section class="slider-section">      
+            <div class="content-left">   
+                <div class="content-top">
+                    <ul>
+                        <li>responsive</li>
+                        <li>user-friendly</li>
+                        <li>smooth</li>
+                    </ul>
+                </div>
+                <div class="copyright">  
+                    <p><span class="copyright-span">©</span>2025<span class="logo"></span>SCHINDLER </p>
+                </div>
+            </div>
+            <div class="content-right">
+                <div class="slider-wrapper">
+                    <div class="img-wrapper">
+                        <picture class="pictures">
+                            <source type="image/avif" srcset="1-medium.avif" >
+                            <img src="medium-1.jpg" width="2500" height="1667" loading="lazy" alt="1">
+                        </picture>
+                        <picture class="pictures">
+                            <source type="image/avif" srcset="2-medium.avif" >
+                            <img src="medium-2.jpg" width="2500" height="1667" loading="lazy" alt="2">
+                        </picture>
+                        <picture class="pictures">
+                            <source type="image/avif" srcset="3-medium.avif" >
+                            <img src="medium-3.jpg" width="2500" height="1667" loading="lazy" alt="3">
+                        </picture>
+                        <picture class="pictures">
+                            <source type="image/avif" srcset="1-medium.avif" >
+                            <img src="medium-1.jpg" width="2500" height="1667" loading="lazy" alt="1">
+                        </picture>
+                        <picture class="pictures">
+                            <source type="image/avif" srcset="2-medium.avif" >
+                            <img src="medium-2.jpg" width="2500" height="1667" loading="lazy" alt="2">
+                        </picture>
+                        <picture class="pictures">
+                            <source type="image/avif" srcset="3-medium.avif" >
+                            <img src="medium-3.jpg" width="2500" height="1667" loading="lazy" alt="3">
+                        </picture>
+                    </div>
+                    <div class="navigation" >
+                        <div class="counter-wrapper">
+                            <span class="counter">1</span><span>/</span><span class="img-length">6</span>
+                        </div>
+                        <div class="button-wrapper">
+                            <button class="prev" aria-label="previous picture">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#1f1f1f" class="left-btn">
+                                    <path d="m569.85-301.85-37.16-36.38L648.46-454H212v-52h436.46L532.69-621.77l37.16-36.38L748-480 569.85-301.85Z"/>
+                                </svg>
+                            </button>
+                            <button class="next" aria-label="next picture">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#1f1f1f">
+                                    <path d="m569.85-301.85-37.16-36.38L648.46-454H212v-52h436.46L532.69-621.77l37.16-36.38L748-480 569.85-301.85Z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </section> 
+        <section class="soon-section">
+            <span>coming soon<span class="dott">.</span><span class="dott">.</span><span class="dott">.</span></span>
+        </section>   
+              
+        <script type="module">
+            
+            import { AddEvents } from './src/AddEvents.js';
+
+            const el = document.querySelector('.img-wrapper');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next')
+            
+            new AddEvents(el, prevBtn, nextBtn);
+        </script>
+        <script type="module">
+            import {LoadPage} from "./src/loadPage/LoadPage.js"
+            const loadpage = new LoadPage()
+            
+        </script>
+
+        <footer class="footer">
+            <address>
+                <span class="name"><span class="logo"></span>SCHINDLER</span>
+                <span>
+                    <span class="svg-wrapper">
+                        <svg class="mail-svg" xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960"  fill="#1f1f1f">
+                            <path d="M192-212q-26 0-43-17t-17-43v-416q0-26 17-43t43-17h576q26 0 43 17t17 43v416q0 26-17 43t-43 17H192Zm288-274L160-698v426q0 14 9 23t23 9h576q14 0 23-9t9-23v-426L480-486Zm0-34 304-200H176l304 200ZM160-698v-22 448q0 14 9 23t23 9h-32v-458Z"/>
+                        </svg>
+                        <span class="mail">picture-slider@web.de</span>
+                    </span> 
+            </address>
+            
+            <div class="time"><span>DE / RT</span><span><span class="hours">00</span><span>:</span><span class="minutes">00</span></span></div>
+        </footer>
+        <script type="module">
+            import {Clock} from "./src/clock/Clock.js"
+            new Clock()
+        </script>
+      
+    </body>
+</html>
