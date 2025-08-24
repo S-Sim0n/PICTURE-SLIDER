@@ -49,16 +49,16 @@
         transform: scale(4.5) scaleY(0); 
     }
     100% { 
-        transform: scale(4.5) scaleY(1); /* Nur Y-Achse aufdecken */
+        transform: scale(4.5) scaleY(1); 
     }
 }
 
 @keyframes logo-scale {
     0% { 
-        transform: scale(4.5) scaleY(1); /* Behalte scaleY bei */
+        transform: scale(4.5) scaleY(1); 
     }
     100% { 
-        transform: scale(1) scaleY(1); /* Skaliere Gesamtgröße runter */
+        transform: scale(1) scaleY(1); 
     }
 }
 
