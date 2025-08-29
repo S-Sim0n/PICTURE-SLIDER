@@ -19,7 +19,9 @@ class CheckFps{
                     lastTime = timeStamp
                 }else{
                     const frameTime = now-lastTime
-                    this.frameValues.push(frameTime)
+                    if(count>5){
+                        this.frameValues.push(frameTime)
+                    }
                 }
                 lastTime=now
                 counter+=1
