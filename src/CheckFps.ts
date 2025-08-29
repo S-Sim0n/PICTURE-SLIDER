@@ -19,7 +19,7 @@ class CheckFps{
                     lastTime = timeStamp
                 }else{
                     const frameTime = now-lastTime
-                    if(count>10){
+                    if(counter>10){
                         this.frameValues.push(frameTime)
                     }
                 }
