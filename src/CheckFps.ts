@@ -23,7 +23,7 @@ class CheckFps{
                 }
                 lastTime=now
                 counter+=1
-                if(counter<40){
+                if(counter<60){
                     this.rafId = requestAnimationFrame(raf)
                     
                 }else{
